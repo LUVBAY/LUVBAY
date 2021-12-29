@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>LUVBAY Webpage</title>
+    </head>
+    <body>
+        #name {
+            font-family: georgia;
+            font-size: large;
+            text-decoration: underline;
+            color: #FF0000;
+            opacity: 0.7;
+        }
+
+        .about {
+            font-family: sans-serif;
+
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+            font-family: Helvetica;
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-family: georgia;
+            text-align: left;
+            color: green;
+        }
+
+        li:hover {
+            color: #0000FF;
+        }
+        h3
+        {
+            color: orange;
+
+        }
+
+        h4.about {
+            color: purple;
+        }
+        a.class:hover
+        {
+            text-decoration: none;
+        }
+        td
+        {
+            background-color: yellow;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        ul
+        {
+            color:violet;
+        }
+    </body>
+</html>
