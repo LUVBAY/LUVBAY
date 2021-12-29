@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "State")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "state")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is State")
+                    }
+                })
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+        <body style = "background-color: fuchsia ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question2.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 1</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>How many states are in United States?</h3>
+                <button id = "right">50</button>
+                <button class = "wrong">45</button>
+                <button class = "wrong">21</button>
+                <button class = "wrong">400</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What does each star on the United States' flag represent?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
