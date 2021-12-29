@@ -1,0 +1,2865 @@
+WARE.
+ 37  README.md 
+Large diffs are not rendered by default.
+
+ 38  close.html 
+@@ -0,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ!</title>
+
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+
+             h3
+            {
+                text-align: center;
+                font-family: Trebuchet;
+                font-size: 30px;
+                color: green;
+                opacity: 1.5;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: violet ;"></body>
+
+
+        <h1>GOODBYE, SEE YOU NEXT TIME!</h1>
+
+    </body>
+</html>
+ 62  end.html 
+@@ -0,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ!</title>
+
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+
+             h3
+            {
+                text-align: center;
+                font-family: Trebuchet;
+                font-size: 30px;
+                color: green;
+                opacity: 1.5;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: cyan ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li>
+                    <a class = "nav-link" href = "question20.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        BACK TO HOMEPAGE
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "close.html">
+                        CLOSE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <h1>THE END</h1>
+        <h2>Congrats! You have completed the whole Quiz.</h2>
+        <h3>Thanks for participating!</h3>
+
+
+    </body>
+</html>
+ 32  myquiz.html 
+@@ -0,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME</title>
+    </head>
+    <body>
+        <body style = "background-color: aqua; text-align: center; "></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ol class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question1.html"><input id = "clickMe" type = "button" value = "Take Quiz" onclick = "doFunction();"</a>
+                </li>
+
+            </ol>
+        </nav>
+
+
+        <main class = "container p-5">
+            <h1>You are Welcome to LUVBAY QUIZ GAME homepage!</h1>
+            <h2>Want to Participate in Quiz? Click on the Take Quiz button above.</h2>
+            <h3>Kindly click on next for the remaining questions.</h3>
+
+        </main>
+
+    </body>
+
+</html>
+ 118  question1.html 
+@@ -0,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "State")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "state")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is State")
+                    }
+                })
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+        <body style = "background-color: fuchsia ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question2.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 1</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>How many states are in United States?</h3>
+                <button id = "right">50</button>
+                <button class = "wrong">45</button>
+                <button class = "wrong">21</button>
+                <button class = "wrong">400</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What does each star on the United States' flag represent?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question10.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Germany")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "germany")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Germany")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: darkturquoise ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question11.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question9.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 10</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>How many local government areas are in Nigeria?</h3>
+                <button id = "right">774</button>
+                <button class = "wrong">567</button>
+                <button class = "wrong">98</button>
+                <button class = "wrong">2, 100</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Frankfurt is in which country?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question11.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Italian")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "italian")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Italian")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: gold ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question12.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question10.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 11</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>The capital city of South Africa is?</h3>
+                <button class = "wrong">Cape Town</button>
+                <button id = "right">Pretoria</button>
+                <button class = "wrong">Johannesburg</button>
+                <button class = "wrong">Accra</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Which language is referred to as musical language?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question12.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Nile")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "nile")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Nile")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: greenyellow ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question13.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question11.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 12</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>The capital city of Russian is?</h3>
+                <button class = "wrong">New Delhi</button>
+                <button id = "right">Moscow</button>
+                <button class = "wrong">Bern</button>
+                <button class = "wrong">Nairobi</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the longest river in the world?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question13.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Asia")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "asia")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Asia")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: hotpink ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question14.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question12.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 13</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>What is the largest state by size in Nigeria?</h3>
+                <button class = "wrong">Oyo State</button>
+                <button class = "wrong">Osun State</button>
+                <button class = "wrong">Lagos State</button>
+                <button id = "right">Niger State</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the largest continent in the world?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question14.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Supreme")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "supreme")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Supreme")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: tomato ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question15.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question13.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 14</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Who designed Nigeria national flag?</h3>
+                <button class = "wrong">Muhamad Buhari</button>
+                <button id = "right">Taiwo Akinkunmi</button>
+                <button class = "wrong">Bola Ige</button>
+                <button class = "wrong">Bola Tinubu</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the highest court in Nigeria?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question15.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "20")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "20")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is 20")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: skyblue ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question16.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question14.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 15</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Which State in Nigeria has the highest local government area?</h3>
+                <button class = "wrong">Kaduna</button>
+                <button id = "right">Kano</button>
+                <button class = "wrong">Ekiti</button>
+                <button class = "wrong">Bayelsa</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>How many local government areas are in Lagos State?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question16.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "6")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "6")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is 6")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: plum ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question17.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question15.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 16</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Kwara State is in which geo-political zone?</h3>
+                <button class = "wrong">North west</button>
+                <button class = "wrong">South East</button>
+                <button id = "right">North Central</button>
+                <button class = "wrong">South West</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>How many geo-political zones are in Nigeria?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question17.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "October 1st")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "october 1st")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is October 1st")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: palegreen ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question18.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question16.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 17</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Which year did Nigeria become a republic?</h3>
+                <button class = "wrong">1960</button>
+                <button class = "wrong">1970</button>
+                <button id = "right">1963</button>
+                <button class = "wrong">2006</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>When is Nigeria's independence day?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question18.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Warsaw")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "warsaw")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Warsaw")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: lightpink;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question19.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question17.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 18</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Which of these is a property of a Wave?</h3>
+                <button id = "right">Polarization</button>
+                <button class = "wrong">Local action</button>
+                <button class = "wrong">Magnetism</button>
+                <button class = "wrong">Photoelectricity</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the capital city of Poland?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question19.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Michael Faraday")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "michael faraday")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Michael Faraday")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: khaki ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question20.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question18.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 19</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Which of the following represents Ohm's law?</h3>
+                <button id = "right">V = IR</button>
+                <button class = "wrong">I = VR</button>
+                <button class = "wrong">R = IV</button>
+                <button class = "wrong">V = I + R</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the name of the scientist that invented electricity?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question2.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Africa")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "africa")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Africa")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: cyan ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question3.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question1.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 2</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>How many States are in Nigeria?</h3>
+                <button class = "wrong">50</button>
+                <button class = "wrong">12</button>
+                <button id = "right">36</button>
+                <button class = "wrong">66</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Nigeria is in what continent?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question20.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "7")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "7")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is 7")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: gold ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "end.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question19.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 20</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>What is the colour of Nigeria national flag?</h3>
+                <button class = "wrong">Purple & Green</button>
+                <button class = "wrong">Brown & Orange</button>
+                <button id = "right">Green & White</button>
+                <button class = "wrong">Blue & Red</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>How many continents do we have in the world?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question3.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "USA")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "usa")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is USA")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: antiquewhite ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question4.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question2.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 3</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>In which country is Harvard University located?</h3>
+                <button class = "wrong">England</button>
+                <button class = "wrong">Germany</button>
+                <button class = "wrong">France</button>
+                 <button id = "right">USA</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>In which country is New York located?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question4.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Ottawa")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "ottawa")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Ottawa")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: aquamarine ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question5.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question3.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 4</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>What is the capital city of Germany?</h3>
+                <button class = "wrong">Abuja</button>
+                <button class = "wrong">Paris</button>
+                <button class = "wrong">Ottawa</button>
+                 <button id = "right">Berlin</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the capital city of Canada?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question5.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Nepal")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "nepal")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Nepal")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: bisque ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question6.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question4.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 5</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Who is the first president of US?</h3>
+                <button id = "right">George Washington</button>
+                <button class = "wrong">George Bush</button>
+                <button class = "wrong">Barrack Obama</button>
+                <button class = "wrong">John Kennedy</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Which country is its flag not rectangular in shape?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question6.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Nigeria")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "nigeria")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Nigeria")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <body style = "background-color: burlywood ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question7.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question5.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 6</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>Which of these food items does not expire according to research?</h3>
+                <button class = "wrong">Rice</button>
+                <button class = "wrong">Milk</button>
+                <button id = "right">Honey</button>
+                <button class = "wrong">Butter</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Which country is the giant of Africa?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question7.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "54")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "54")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is 54")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: coral ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question8.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question6.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 7</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>The only country in the world that starts with letter O is located in which continent?</h3>
+                <button class = "wrong">Europe</button>
+                <button id = "right">Asia</button>
+                <button class = "wrong">North America</button>
+                <button class = "wrong">Africa</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>How many countries are in Africa continent?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question8.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Everest")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "everest")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Everest")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: lawngreen ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question9.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question7.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 8</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>What is the highest mountain in Africa?</h3>
+                <button class = "wrong">Everest</button>
+                <button class = "wrong">Mount Kenya</button>
+                <button class = "wrong">Mount Stanley</button>
+                <button id = "right">Kilimanjaro</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the highest mountain in the world?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
+ 135  question9.html 
+@@ -0,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Alaska")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "alaska")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Alaska")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: darkorange ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question10.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question8.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 9</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>What is the largest city in the world?</h3>
+                <button class = "wrong">Montevideo</button>
+                <button class = "wrong">London</button>
+                <button class = "wrong">Rome</button>
+                <button id = "right">Tokyo</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>What is the largest State by size in US?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
