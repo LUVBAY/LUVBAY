@@ -1,7 +1,7 @@
-- Hello World! I’m LUVBAY, a qualified, certified and experienced programmer/developer.
-- I’m interested in Software engineering, Computer science, Data structure/analysis, Artificial intelligence and Machine learning tasks/projects.
+- Hello World! I’m LUVBAY, a qualified, certified and experienced developer.
+- I’m interested in Software engineering, Web development, Game development, App development (iOS & Android), Data science/analysis/structure,  Artificial intelligence and Machine learning tasks/projects.
 - I’m currently learning more programming languages as I'm technologically dynamic in conformity with day-to-day changes in technologies, computer science and software engineering.
-- I’m looking to collaborate on detailed study and analysis of Artificial intelligence/Machine development.
+- I’m looking to collaborate on detailed study and analysis of Artificial intelligence & Machine development.
 - How to reach me? Kindly contact me through: luvbayelect@gmail.com, +2347031800927(Call and Whatsapp).
 
 <
