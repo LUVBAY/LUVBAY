@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>LUVBAY QUIZ GAME!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector("#right");
+                let wrong_buttons = document.querySelectorAll(".wrong");
+                let message = document.querySelector("#message");
+
+
+                right_button.addEventListener("click", function() {
+                    right_button.style.backgroundColor = 'green';
+                    message.innerHTML = "You are right!";
+                    alert("You are right!")
+                })
+
+                for (let i = 0; i < wrong_buttons.length; i++)
+                {
+                    wrong_buttons[i].addEventListener("click", function() {
+                        wrong_buttons[i].style.backgroundColor = 'red';
+                        message.innerHTML = "You are wrong!";
+                        alert("You are wrong!")
+
+
+                    })
+
+                }
+                document.querySelector("#free-button").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    let message_free = document.querySelector("#free-message");
+                    if (input.value === "Germany")
+                    {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "germany")
+            {
+                        input.style.color = 'green';
+                        message_free.innerHTML = 'You are right!';
+                        alert("You are right!")
+                    }
+                    else if (input.value === "")
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You must enter an answer!';
+                        alert("You must enter an answer!")
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        message_free.innerHTML = 'You are wrong!';
+                        alert("The right answer is Germany")
+                    }
+                })
+            });
+
+
+        </script>
+        <style>
+            h1
+            {
+                font-size: 40px;
+            }
+
+            h2
+            {
+                 font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+         <body style = "background-color: darkturquoise ;"></body>
+        <nav class = "navbar navbar-expand-nd navbar-light bg-light border">
+            <ul class = "navbar-nav mr-auto mt-2">
+                <li class = "nav-item">
+                    <a class = "nav-link" href = "question11.html">
+                        NEXT
+                    </a>
+                </li>
+
+                <li>
+                    <a class = "nav-link" href = "question9.html">
+                        PREVIOUS
+                    </a>
+                </li>
+
+                 <li>
+                    <a class = "nav-link" href = "myquiz.html">
+                        HOMEPAGE
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>QUESTION 10</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>SECTION A (OBJECTIVES)</h2>
+                <hr>
+
+                <h3>How many local government areas are in Nigeria?</h3>
+                <button id = "right">774</button>
+                <button class = "wrong">567</button>
+                <button class = "wrong">98</button>
+                <button class = "wrong">2, 100</button>
+                <p id="message"></p>
+
+            </div>
+
+            <div class="section">
+                <h2 class = "free-response">SECTION B (FILL-IN)
+                <hr class = "free-response">
+
+                <h3>Frankfurt is in which country?</h3>
+                <input type ="text" placeholder = "Enter Answer">
+                <button id="free-button">Submit</button>
+                <p id="free-message"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
